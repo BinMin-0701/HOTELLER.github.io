@@ -51,7 +51,6 @@ h1{
 header{
     align-items: center;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     padding-top: 28px;
 }
@@ -86,7 +85,9 @@ header{
     font-size: 16px;
     line-height: 26px;
 }
-
+@media (max-width:992px) {
+    .ja-main-nav{display: none;}
+}
 /*  header button action */
 .btn a{
     font-weight: 500;
@@ -112,6 +113,16 @@ header{
     padding-bottom: 215px;
     margin-top: -100px;
 }
+@media (max-width:992px) {
+    .section-hero {
+        padding-bottom: 215px;
+    }
+
+    .section-hero h1,
+    h3 {
+        display: none;
+    }
+}
 .section-hero h3{
     font-size: 14px;
     font-weight: 600;
@@ -132,10 +143,11 @@ header{
 .section-hero .hero-decor{
     text-align: center;
 }
+
 @media (max-width:1200px) {
     .section-hero img{display: none;}
 }
-@media (max-width:1400px) {
+@media only screen and (min-width:993px) and (max-width:1400px) {
     .section-hero{
         padding-top: 190px;
         padding-bottom: 100px;

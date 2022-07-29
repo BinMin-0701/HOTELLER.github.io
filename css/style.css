@@ -41,6 +41,7 @@ h1{
     padding-top: 120px;
     padding-bottom: 120px;
 }
+
 /* Header */
 header{
     align-items: center;
@@ -92,7 +93,9 @@ header{
     background: #AC9D80;
     color: #FFFFFF;
 }
-
+@media (max-width:768px) {
+    .ja-main-nav{display: none;}
+}
 /* section 1 */
 
 .section-hero{
@@ -104,7 +107,12 @@ header{
     padding-bottom: 215px;
     margin-top: -100px;
 }
-
+/* @media (max-width:1400px) {
+    .section-hero{
+        padding-top: 190px;
+        padding-bottom: 100px;
+    }
+} */
 .section-hero h3{
     font-size: 14px;
     font-weight: 600;
@@ -125,7 +133,9 @@ header{
 .section-hero .hero-decor{
     text-align: center;
 }
-
+@media (max-width:1200px) {
+    .section-hero img{display: none;}
+}
 /*  */
 .section-title{
     text-align: center;
@@ -155,7 +165,7 @@ header{
 
 /* Content - This is hoteller */
 .ct-hoteller{
-    width: 828px;
+    max-width: 828px;
     text-align: center;
     margin: auto;
 }
@@ -193,12 +203,14 @@ header{
 }
 .evaluate{
     background: #AC9D80;
-    color: #FFFFFF;
-    position: absolute;
     bottom: 0;
+    color: #FFFFFF;
+    max-width: 288px;
+    max-height: 288px;
+    position: absolute;
 }
 .evaluate .anh3{
-    margin: 29px 69px 20px;
+    padding: 29px 69px 20px;
 }
 .evaluate h1{
     font-size: 14px;
@@ -228,7 +240,9 @@ header{
 .evaluate .evaluate-star p{
     margin: 0;
 }
-
+@media (max-width:992px) {
+    .evaluate{display: none;}
+}
 /*  */
 .section-futere h1{
     font-size: 36px;
@@ -242,6 +256,7 @@ header{
 .frame-box {
     max-width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding-top: 64px;
 }
@@ -273,17 +288,18 @@ header{
 /* Make Your Golden Memories */
 .section-our{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding-top: 120px;
 }
 .our-pd{
-    margin: 0 18px;
+    margin: 18px 18px;
 }
 .section-our-content{
     background: #F9F9F9;
     padding: 74px 72px 80px;
 }
-.our-lux-spa{width: 360px;}
+.our-lux-spa{max-width: 360px;}
 .our-lux-spa h4{
     color: #AC9D80;
     font-size: 14px;
@@ -340,6 +356,7 @@ header{
 .feedback {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .feedback-wrap {
@@ -350,7 +367,7 @@ header{
 }
 .feedback-content{
     border: 1px dashed #E0E0E0;
-    width: 396px;
+    max-width: 396px;
 }
 .feedback-content .img_title {
     padding: 32px 0;
@@ -466,7 +483,7 @@ header{
 .option-exclusive p {
     margin: 24px auto;
     text-align: center;
-    width: 437px;
+    max-width: 437px;
 }
 .btn-view{
     margin: 24px auto 120px;
@@ -488,8 +505,8 @@ header{
     border-bottom: 1px dashed #E0E0E0;
     display: flex;
     justify-content: center;
-    width: 1260px;
     margin: auto;
+    max-width: 1260px;
     padding: 48px 0;
 }
 .section-latets-content{
@@ -547,6 +564,7 @@ header{
     border-top: 1px dashed #E0E0E0;
     border-bottom: 1px dashed #E0E0E0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     margin: 84px 0 -56px;
@@ -631,7 +649,7 @@ input[type='text'] {
 
 /*  */
 .end_page {
-    width: 398px;
+    max-width: 398px;
     margin: auto;
     padding: 40px 0 52px;
 }

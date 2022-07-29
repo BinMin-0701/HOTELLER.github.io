@@ -112,12 +112,6 @@ header{
     padding-bottom: 215px;
     margin-top: -100px;
 }
-/* @media (max-width:1400px) {
-    .section-hero{
-        padding-top: 190px;
-        padding-bottom: 100px;
-    }
-} */
 .section-hero h3{
     font-size: 14px;
     font-weight: 600;
@@ -140,6 +134,12 @@ header{
 }
 @media (max-width:1200px) {
     .section-hero img{display: none;}
+}
+@media (max-width:1400px) {
+    .section-hero{
+        padding-top: 190px;
+        padding-bottom: 100px;
+    }
 }
 /*  */
 .section-title{
@@ -328,14 +328,13 @@ header{
 /* option services */
 .option-services-group-4{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-bottom: 32px;
 }
+
 .option {
     border: 1px dashed #E0E0E0;
-    width: 288px;
     height: 228px;
+    margin: 16px 18px;
+    width: 288px;
 }
 .option img {
     display: block;
@@ -349,7 +348,6 @@ header{
     letter-spacing: -0.02em;
     margin: 32px 0 0 0;
     font-family: 'Forum', cursive;
-    font-weight: 400;
     font-size: 28px;
     text-align: center;
     text-transform: capitalize;
@@ -389,7 +387,7 @@ header{
     border: 1px dashed #E0E0E0;
     height: 1px;
     margin: 32px auto;
-    width: 332px;
+    max-width: 332px;
 }
 
 .feedback-content .avata {
@@ -397,7 +395,7 @@ header{
     margin: auto;
     margin-bottom: 10px;
     flex-direction: row;
-    width: 176px;
+    max-width: 176px;
 }
 .avata .avata_left {
     margin-right: 16px;
@@ -412,8 +410,7 @@ header{
     letter-spacing: -0.01em;
     line-height: 30px;
     margin: 0;  
-    font-size: 20px;
-    
+    font-size: 20px;    
 }
 
 .avata .info p {

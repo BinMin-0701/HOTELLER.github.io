@@ -33,6 +33,11 @@ h1{
     text-transform: capitalize;
 }
 
+.container{
+    max-width: 1260px;
+    margin: auto;
+}
+
 .title-head{
     padding-top: 120px;
     padding-bottom: 64px;
@@ -166,8 +171,8 @@ header{
 /* Content - This is hoteller */
 .ct-hoteller{
     max-width: 828px;
+    margin: auto;   
     text-align: center;
-    margin: auto;
 }
 .ct-hoteller p{
     font-size: 18px;
@@ -244,7 +249,7 @@ header{
     .evaluate{display: none;}
 }
 /*  */
-.section-future h1{
+.section-future .title-section-future h1{
     font-size: 36px;
     line-height: 46px;
     letter-spacing: -0.02em;
@@ -323,13 +328,12 @@ header{
 /* option services */
 .option-services-group-4{
     display: flex;
-    justify-content: center;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 32px;
 }
 .option {
     border: 1px dashed #E0E0E0;
-    margin: 0 16px 32px;
     width: 288px;
     height: 228px;
 }
@@ -356,7 +360,6 @@ header{
 .feedback {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .feedback-wrap {
@@ -551,7 +554,7 @@ header{
     flex-direction: column;
 }
 .photo_index {
-    width: 396px;
+    max-width: 396px;
     margin: 0 18px;
 }
 

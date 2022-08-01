@@ -100,7 +100,12 @@ h1 {
     padding-top: 120px;
     padding-bottom: 120px;
 }
-
+@media (max-width:576px) {
+    .section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
 
 /* Header */
 header {
@@ -231,10 +236,6 @@ header {
                 font-size: 10px;
                 line-height: 17px;
                     padding: 8px 21px;
-            }
-
-            .section-hero {
-                padding-bottom: 100px;
             }
 
             .section-hero h1 {

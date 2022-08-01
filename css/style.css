@@ -12,7 +12,11 @@ body {
     margin: 0;
     padding: 0;
 }
-
+@media (max-width:576px) {
+    body{
+        font-size: 12px;
+    }
+}
 :root {
     --h1: 72px;
     --h2: 48px;
@@ -59,6 +63,7 @@ h1 {
 @media (max-width:1400px) {
     .container {
         max-width: 1140px;
+        padding: 0 18px;
     }
 
     @media (max-width:1200px) {
@@ -210,12 +215,22 @@ header {
         }
 
         @media (max-width:576px) {
-            .ja-header {
-                justify-content: end;
+            .ja-header{
+                justify-content: space-between;
             }
-
-            .ja-brand {
-                display: none;
+            .ja-brand{
+                padding-left: 38px;
+            }
+            .ja-brand a{
+                font-size: 20px;
+            }
+            .ja-brand img{
+                max-height: 43px;
+            }
+            .btn a {
+                font-size: 10px;
+                line-height: 17px;
+                    padding: 8px 21px;
             }
 
             .section-hero {
@@ -249,7 +264,7 @@ header {
     width: 40px;
 }
 
-.section-title h1 {
+.h1 {
     color: #333;
     font-size: 48px;
     line-height: 58px;
@@ -258,12 +273,16 @@ header {
 }
 
 @media (max-width:576px) {
-    .section-title h1 {
-        font-size: var(--h3);
+    .h1 {
+        font-size: 24px;
+        line-height: 29px;
     }
 
-    .section-title .p {
-        font-size: var(--h6);
+    .p {
+        font-size: 10px;
+    }
+    .title-head{
+        padding: 60px 0 32px;
     }
 }
 
@@ -279,7 +298,12 @@ header {
     line-height: 32px;
     margin: 0;
 }
-
+@media (max-width:576px) {
+    .ct-hoteller p{
+        font-size: 12px;
+        line-height: 21px;
+    }
+}
 /* button discovery more */
 .btn-bg-none {
     border: 1px solid #AC9D80;
@@ -304,7 +328,11 @@ header {
 .img-hoteller {
     padding: 0 18px;
 }
-
+@media (max-width:576px) {
+    .img-hoteller {
+            padding: 0 9px;
+        }
+}
 .section-img-hoteller .img-hoteller-left {
     padding-top: 83px;
 }
@@ -375,7 +403,8 @@ header {
 
 @media (max-width:576px) {
     .section-future .title-section-future h1 {
-        font-size: var(--h3);
+        font-size: 24px;
+        line-height: 31px;
     }
 }
 
@@ -412,14 +441,17 @@ header {
     margin: 0%;
     margin: 8px 54px 0;
 }
-
+@media (max-width:576px){
+    .frame {
+        }
+    .frame h1{
+        font-size: 64px;
+        margin: 4px 27px 0;
+    }
+}
 @media (max-width:992px) {
     .frame-box {
         flex-direction: column;
-    }
-
-    .frame {
-        padding: 18px 0;
     }
 }
 
@@ -453,18 +485,20 @@ header {
 }
 
 .our-lux-spa h1 {
-    color: #333;
-    font-size: 48px;
-    line-height: 58px;
-    letter-spacing: -0.03em;
-    margin: 24px 0;
     text-align: left;
 }
 
 .our-lux-spa p {
     margin: 24px 0 64px;
 }
-
+@media (max-width:576px){
+    .section-our{
+        padding-top: 60px;
+    }
+    .section-our-content{
+        padding: 37px 36px 40px;
+    }
+}
 @media (max-width:992px) {
     .section-our {
         flex-direction: column;
@@ -764,7 +798,13 @@ header {
     align-items: center;
 }
 
-
+@media (max-width:576px) {
+    .section-latets-content h1 {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 4px 0 12px;
+    }
+}
 @media (max-width:1200px) {
     .section-latets-info {
         flex-direction: column;
@@ -952,8 +992,15 @@ input[type='text'] {
     color: #333333;
 }
 
-@media (max-width:992px) {
-    br {
-        display: none;
-    }
+/*  */
+
+/* About US */
+
+/* banner */
+.banner{
+    background-image: url(../img/banner.png);
+    padding-top: 195px;
+}
+.banner h1{
+    margin: 0 0 16px;
 }

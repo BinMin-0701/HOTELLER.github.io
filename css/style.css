@@ -675,9 +675,8 @@ header {
 }
 
 .option-exclusive p {
-    margin: 24px auto;
+    padding: 24px 101px;
     text-align: center;
-    max-width: 437px;
 }
 
 .btn-view {

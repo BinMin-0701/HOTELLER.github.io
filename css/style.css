@@ -1,3 +1,7 @@
+:root {
+    --forum: 'forum', cursive;
+    --manrope: 'Manrope', sans-serif;
+}
 * {
     box-sizing: border-box;
 }
@@ -7,19 +11,16 @@ body {
     color: #4F4F4F;
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
     margin: 0;
     padding: 0;
 }
-@media (max-width:576px) {
-    body{
-        font-size: 12px;
+
+@media (min-width:576px) {
+    body {
+        font-size: 14px;
     }
-}
-:root {
-    --f: 'forum',cursive;
-    --m: 'Manrope',cursive;
 }
 
 a {
@@ -37,54 +38,70 @@ img {
 }
 
 h1 {
+    font-size: 48px;
     font-family: 'forum', cursive;
     font-weight: 400;
+    line-height: 58px;
+    letter-spacing: -0.03em;
+    margin: 0;
     text-align: center;
     text-transform: capitalize;
 }
 
-.p {
+h4 {
+    color: #AC9D80;
+    font-family: 'Forum', cursive;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+h5 {
     color: #AC9D80;
     font-weight: 600;
+    font-size: 14px;
     line-height: 26px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
 .container {
-    max-width: 1260px;
+    max-width: 100%;
     padding: 0 16px;
     margin: auto;
 }
 
-@media (max-width:1400px) {
+@media (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width:1200px) {
     .container {
         max-width: 1140px;
-        padding: 0 18px;
     }
+}
 
-    @media (max-width:1200px) {
-        .container {
-            max-width: 960px;
-        }
-
-        @media (max-width:992px) {
-            .container {
-                max-width: 720px;
-            }
-
-            @media (max-width:768px) {
-                .container {
-                    max-width: 540px;
-                }
-            }
-
-            @media (max-width:540px) {
-                .container {
-                    max-width: 100%;
-                }
-            }
-        }
+@media (min-width:1400px) {
+    .container {
+        max-width: 1476px;
     }
 }
 
@@ -97,6 +114,7 @@ h1 {
     padding-top: 120px;
     padding-bottom: 120px;
 }
+
 @media (max-width:576px) {
     .section {
         padding-top: 60px;
@@ -151,16 +169,16 @@ header {
     line-height: 26px;
     padding: 12px 32px;
 }
+.btn-header-index a:hover{
+    background-color: #ac9465;
+}
 
 .btn-action {
     background: #AC9D80;
     color: #FFFFFF;
 }
 
-
-/*  */
 /* section 1 */
-
 .section-hero {
     background: url(../img/bg_head.jpg) no-repeat;
     background-size: 100%;
@@ -171,13 +189,10 @@ header {
     margin-top: -100px;
 }
 
-.section-hero h3 {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+.section-hero h5 {
+    color: #FFF;
     margin: 0 0 16px;
     text-align: center;
-    text-transform: uppercase;
 }
 
 .section-hero h1 {
@@ -190,6 +205,7 @@ header {
 .section-hero .hero-decor {
     text-align: center;
 }
+
 @media (max-width:576px) {
     .ja-header {
         justify-content: space-between;
@@ -213,23 +229,24 @@ header {
         padding: 8px 21px;
     }
 
-
     .section-hero h1 {
         display: none;
     }
 }
+
 @media (max-width:992px) {
 
     .section-hero h1 {
         font-size: 39px;
         line-height: 39px;
         margin: 0;
-    } 
+    }
+
     .ja-main-nav {
         display: none;
     }
 
-        .section-hero{
+    .section-hero {
         padding-top: 117px;
         padding-bottom: 48px;
     }
@@ -237,9 +254,8 @@ header {
     .hero-decor {
         display: none;
     }
-
-
 }
+
 @media (min-width:992px) and (max-width:1200px) {
     .section-hero h3 {
         font-size: 12px;
@@ -249,7 +265,7 @@ header {
         font-size: 48px;
         line-height: 58px;
         margin: 0 0 30px;
-    }    
+    }
 }
 
 @media screen and (min-width:992px) and (max-width:1440px) {
@@ -259,7 +275,7 @@ header {
     }
 }
 
-/*  */
+/* Begin: Title Hoteller Hotel specialises in providing luxury */
 .section-title {
     text-align: center;
 }
@@ -272,24 +288,8 @@ header {
     width: 40px;
 }
 
-.h1 {
-    color: #333;
-    font-size: 48px;
-    line-height: 58px;
-    letter-spacing: -0.03em;
-    margin: 0;
-}
-
 @media (max-width:576px) {
-    .h1 {
-        font-size: 24px;
-        line-height: 29px;
-    }
-
-    .p {
-        font-size: 10px;
-    }
-    .title-head{
+    .title-head {
         padding: 60px 0 32px;
     }
 }
@@ -306,12 +306,14 @@ header {
     line-height: 32px;
     margin: 0;
 }
+
 @media (max-width:576px) {
-    .ct-hoteller p{
+    .ct-hoteller p {
         font-size: 12px;
         line-height: 21px;
     }
 }
+
 /* button discovery more */
 .btn-bg-none {
     border: 1px solid #AC9D80;
@@ -326,8 +328,14 @@ header {
 .btn-discover {
     padding-top: 64px;
 }
+.btn-click a:hover{
+    color: #FFF;
+    background-color: #AC9D80;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+/* End: Title Hoteller Hotel specialises in providing luxury */
 
-/* Hoteller img */
+/* Begin: Hoteller img */
 .section-img-hoteller {
     display: flex;
     justify-content: center;
@@ -336,10 +344,16 @@ header {
 .img-hoteller {
     padding: 0 18px;
 }
+
 @media (max-width:992px) {
     .img-hoteller {
-            padding: 0 9px;
-        }
+        padding: 0 9px;
+    }
+}
+@media (min-width:1400px) {
+    .section-img-hoteller{
+        padding: 0 108px;
+    }
 }
 .section-img-hoteller .img-hoteller-left {
     padding-top: 83px;
@@ -360,11 +374,9 @@ header {
     padding: 29px 69px 20px;
 }
 
-.evaluate h1 {
-    font-size: 14px;
-    line-height: 26px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+.evaluate h5 {
+    color: #FFF;
+    text-align: center;
     margin: 0;
 }
 
@@ -374,12 +386,10 @@ header {
     padding-bottom: 29px;
 }
 
-.evaluate .evaluate-box h2 {
+.evaluate .evaluate-box h4 {
+    color: #FFF;
     font-size: 72px;
-    font-weight: 400;
-    font-family: 'forum', cursive;
     line-height: 78px;
-    letter-spacing: -0.02em;
     margin: 0 11px 0 0;
 }
 
@@ -388,7 +398,9 @@ header {
     flex-flow: column;
     justify-content: center;
 }
-
+.star{
+    color: #FFCA41;
+}
 .evaluate .evaluate-star p {
     margin: 0;
 }
@@ -398,13 +410,13 @@ header {
         display: none;
     }
 }
+/* End: Hoteller img */
 
-/*  */
+/* Begin: We strive to be the best in our field to make your */
 .section-future .title-section-future h1 {
     font-size: 36px;
     line-height: 46px;
     letter-spacing: -0.02em;
-    margin: auto;
 }
 
 @media (max-width:576px) {
@@ -414,31 +426,24 @@ header {
     }
 }
 
-/*  */
-
-/*  */
 .frame-box {
     max-width: 100%;
     display: flex;
     justify-content: center;
 }
-.frame-box-content{
+
+.frame-box-content {
     display: flex;
 }
+
 .frame {
     margin: 0 18px;
     padding-top: 64px;
 }
 
-.frame p {
+.frame h5 {
     color: #828282;
-    font-family: 'Manrope', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    line-height: 26px;
     text-align: center;
-    text-transform: uppercase;
-    margin: 0;
 }
 
 .frame h1 {
@@ -446,7 +451,6 @@ header {
     font-size: 96px;
     line-height: 96px;
     letter-spacing: -0.02em;
-    margin: 0%;
     margin: 8px 54px 0;
 }
 
@@ -454,27 +458,29 @@ header {
     .frame-box {
         flex-direction: column;
     }
-    .frame-box-content{
+
+    .frame-box-content {
         justify-content: space-around;
     }
-    .frame{
+
+    .frame {
         width: 288px;
     }
-    .frame h1{
+
+    .frame h1 {
         font-size: 80px;
     }
-    @media (max-width:576px){
-    .frame h1{
-        font-size: 64px;
-        margin: 4px 27px 0;
+
+    @media (max-width:576px) {
+        .frame h1 {
+            font-size: 64px;
+            margin: 4px 27px 0;
+        }
     }
 }
-}
 
-/* Make Your Golden Memories */
 .section-our {
     display: flex;
-    justify-content: center;
     padding-top: 120px;
 }
 
@@ -496,10 +502,6 @@ header {
     max-width: 360px;
 }
 
-.our-lux-spa .p {
-    margin: 0;
-}
-
 .our-lux-spa h1 {
     text-align: left;
 }
@@ -507,14 +509,17 @@ header {
 .our-lux-spa p {
     margin: 24px 0 64px;
 }
-@media (max-width:576px){
-    .section-our{
+
+@media (max-width:576px) {
+    .section-our {
         padding-top: 60px;
     }
-    .section-our-content{
+
+    .section-our-content {
         padding: 37px 36px 40px;
     }
 }
+
 @media (max-width:992px) {
     .section-our {
         flex-direction: column;
@@ -524,8 +529,13 @@ header {
         max-width: none;
     }
 }
+/* End: We strive to be the best in our field to make your */
 
-/* option services */
+/* Begin: Luxury & Comfort Our services and wonders of Hoteller */
+.option-services {
+    padding: 0 108px;
+}
+
 .option-services-group-4 {
     display: flex;
 }
@@ -543,32 +553,29 @@ header {
     margin-top: 48px;
 }
 
-.option p {
+.option h4 {
     color: #333333;
-    height: 36px;
-    line-height: 36px;
-    letter-spacing: -0.02em;
     margin: 32px 0 0 0;
-    font-family: 'Forum', cursive;
-    font-size: 28px;
-    text-align: center;
-    text-transform: capitalize;
 }
-@media (max-width:576px){
-    .option-services{
+
+@media (max-width:576px) {
+    .option-services {
         flex-direction: column;
         margin: auto;
     }
-    .option-services-group-4{
+
+    .option-services-group-4 {
         margin: auto;
     }
 }
+
 @media (max-width:768px) {
-    .option{
+    .option {
         margin: 8px 9px;
         width: 240px;
     }
 }
+
 @media (max-width:992px) {
     .option-services {
         display: flex;
@@ -579,10 +586,9 @@ header {
         flex-direction: column;
     }
 }
+/* Begin: Luxury & Comfort Our services and wonders of Hoteller */
 
-/*  */
-
-/* feedback */
+/* Begin What People Say */
 .feedback {
     display: flex;
     justify-content: center;
@@ -608,7 +614,6 @@ header {
 }
 
 .feedback-content p {
-    line-height: 24px;
     margin: 0 32px;
     text-align: center;
 }
@@ -679,10 +684,9 @@ header {
         margin: auto;
     }
 }
+/* End: What People Say */
 
-/*  */
-
-/* option-exclusive */
+/* Begin: exclusive offer */
 .section-exclusive {
     display: flex;
     justify-content: center;
@@ -693,38 +697,20 @@ header {
     width: 34%;
 }
 
-.option-exclusive h3 {
-    color: #AC9D80;
-    letter-spacing: 0.05em;
+.option-exclusive h5 {
     margin: 120px auto 8px;
     text-align: center;
-    text-transform: uppercase;
-    font-family: 'Manrope', sans-serif;
-    font-size: 14px;
 }
 
 .option-exclusive h1 {
     color: #333333;
     letter-spacing: -0.02em;
-    line-height: 58px;
-    font-size: 48px;
     margin: 0 auto;
 }
 
 .option-exclusive img {
     display: block;
     margin: 64px auto;
-}
-
-.option-exclusive h4 {
-    color: #AC9D80;
-    font-family: 'Forum', cursive;
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 36px;
-    text-align: center;
-    text-transform: capitalize;
-    margin: 0;
 }
 
 .option-exclusive p {
@@ -734,6 +720,9 @@ header {
 
 .btn-view {
     margin: 24px auto 120px;
+}
+#btn-view-midle a:hover{
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 #option-middle {
@@ -758,14 +747,15 @@ header {
         width: 100%;
     }
 }
-@media (max-width:992px){
-    .option-exclusive p{
+
+@media (max-width:992px) {
+    .option-exclusive p {
         padding: 24px 50px;
     }
 }
-/*  */
+/* End: exclusive offer */
 
-/* section latets */
+/* Begin: Latest News */
 .section-latets {
     border-bottom: 1px dashed #E0E0E0;
     display: flex;
@@ -785,7 +775,8 @@ header {
 }
 
 .section-latets-content {
-    padding: 32px 0;
+    display: flex;
+    align-items: center;
 }
 
 .section-latets-content div {
@@ -803,17 +794,14 @@ header {
     color: #AC9D80;
 }
 
-.section-latets-content h1 {
+.section-latets-content h4 {
     color: #333;
-    font-size: 28px;
-    line-height: 36px;
-    letter-spacing: -0.02em;
     margin: 8px 0 24px;
     text-align: left;
 }
 
 .section-latets-content p {
-    margin: 0;
+    margin-bottom: 16px;
 }
 
 .btn-read-more {
@@ -828,10 +816,20 @@ header {
         margin: 4px 0 12px;
         text-align: center;
     }
-     .section-latets-img img{width: 100%;}   
-    .section-latets-content{text-align: center;}
-    .btn-read-more{justify-content: center;}
+
+    .section-latets-img img {
+        width: 100%;
+    }
+
+    .section-latets-content {
+        text-align: center;
+    }
+
+    .btn-read-more {
+        justify-content: center;
+    }
 }
+
 @media (max-width:1200px) {
     .section-latets-info {
         flex-direction: column;
@@ -848,12 +846,9 @@ header {
         }
     }
 }
+/* End: Latest News */
 
-
-
-/*  */
-
-/*  */
+/* Begin: Photo Gallery of Our Hotel */
 .photos_gallery {
     display: flex;
     justify-content: center;
@@ -872,15 +867,20 @@ header {
 .photo_index img {
     margin-bottom: 36px;
 }
+.photo_index img:hover{
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
 
-@media (max-width:768px){
+@media (max-width:768px) {
     .photo_index {
         margin: 0 5px;
     }
+
     .photo_index img {
         margin-bottom: 9px;
     }
 }
+
 @media (min-width:768px) and (max-width:1200px) {
     .photo_index {
         margin: 0 9px;
@@ -890,11 +890,13 @@ header {
         margin-bottom: 18px;
     }
 }
+/* End: Photo Gallery of Our Hotel */
 
-/* connect */
-footer{
+/* Begin: Footer */
+footer {
     padding-top: 84px;
 }
+
 .connect {
     border-top: 1px dashed #E0E0E0;
     border-bottom: 1px dashed #E0E0E0;
@@ -913,16 +915,13 @@ footer{
     border-right: 1px dashed #E0E0E0;
 }
 
-/* us contact */
+/* contact */
 .contact {
     text-align: center;
 }
 
-.box h1 {
+.box h4 {
     color: #333333;
-    line-height: 36px;
-    letter-spacing: -0.02em;
-    font-size: 28px;
     margin: 0;
 }
 
@@ -936,7 +935,7 @@ footer{
     font-size: 14px;
 }
 
-/* us address */
+/* address */
 .address {
     text-align: center;
 }
@@ -979,11 +978,15 @@ footer{
     }
 }
 
-/*  */
+.newsletter {
+    padding: 64px 0;
+}
+
 /* input emmail */
 .input-email {
-    text-align: center;
-    width: 612px;
+    margin: auto;
+    max-width: 612px;
+    padding-top: 48px;
 }
 
 input {
@@ -998,24 +1001,14 @@ input[type='text'] {
     color: #828282;
 }
 
-/*  */
 .btn-subscribe {
     display: flex;
     justify-content: center;
     padding: 24px 0 64px;
 }
 
-.line {
-    border: 1px dashed #E0E0E0;
-    box-sizing: border-box;
-    height: 1px;
-    opacity: 0.5;
-}
-
-/*  */
-.end_page {
-    max-width: 398px;
-    margin: auto;
+.joom {
+    border-top: 1px dashed #E0E0E0;
     padding: 40px 0 52px;
 }
 
@@ -1029,60 +1022,76 @@ input[type='text'] {
 .end_page span {
     color: #333333;
 }
+/* End: Footer */
 
-/*  */
-
-/* About US */
-.btn-header{
+/* Page About US */
+.btn-header {
     border: 1px solid #FFFFFF;
     color: #FFF;
 }
 
 /* banner */
-.hero-banner{
+.hero-banner {
     background-image: url(../img/banner.png);
     padding: 195px 0 157px;
     margin-top: -92px;
 }
-.hero-banner h1{
+
+.hero-banner h1 {
     line-height: 58px;
     margin: 0 0 16px;
 }
-.hero-banner div{
+
+.hero-banner div {
     display: flex;
     justify-content: center;
 }
-.hero-banner h1{
+
+.hero-banner h1 {
     font-size: 48px;
 }
-.hero-banner h3{
+
+.hero-banner h3 {
     font-weight: 400;
     margin: 0 8px;
 }
+
 @media (max-width:576px) {
-    header{
+    header {
         padding-top: 14px;
     }
+
     .hero-banner {
         padding-top: 130px;
         margin-top: -58px;
     }
 }
+
 @media (max-width:992px) {
-    .hero-banner h1,.hero-banner div{display: none;}
-    .hero-banner{padding-bottom: 0;}
+
+    .hero-banner h1,
+    .hero-banner div {
+        display: none;
+    }
+
+    .hero-banner {
+        padding-bottom: 0;
+    }
 }
+
 /*  */
 /* WELCOME TO Hoteller hotel */
-.section-welcome{
+.section-welcome {
     display: flex;
 }
-.welcome-title{
+
+.welcome-title {
     width: 50%;
     margin: 0 18px;
 }
-.welcome-title-p1{
-    font-family: 'forum',cursive;
+
+.welcome-title-p1 {
+    font-family: 'forum', cursive;
     font-size: 20px;
     letter-spacing: -0.01em;
     line-height: 30px;
@@ -1090,25 +1099,29 @@ input[type='text'] {
 }
 
 /* banner */
-.banner{
+.banner {
     position: relative;
 }
-.container-banner{
+
+.container-banner {
     padding-bottom: 64px;
     padding-top: 145px;
 }
-.banner-aosolute{
+
+.banner-aosolute {
     background-color: #AC9D80;
     max-width: 396px;
     right: 0;
     position: absolute;
     top: -45px;
 }
-.banner-aosolute-content{
+
+.banner-aosolute-content {
     padding: 48px 48px 64px;
     text-align: center;
 }
-.banner-aosolute-content p{
+
+.banner-aosolute-content p {
     color: #FFF;
     font-family: var(--f);
     font-size: 20px;
@@ -1117,20 +1130,47 @@ input[type='text'] {
     margin: 24px 0 40px;
     text-transform: capitalize;
 }
-@media (max-width:992px){
-    .banner-aosolute{display: none;}
+
+@media (max-width:992px) {
+    .banner-aosolute {
+        display: none;
+    }
 }
+
 @media (min-width:992px) and (max-width:1200px) {
-    .banner{
+    .banner {
         display: flex;
         position: inherit;
     }
-    .banner-image{max-width: 70%;}
-    .banner-image img{height: 100%;
-    object-fit: cover;}
-    .banner-aosolute{
+
+    .banner-image {
+        max-width: 70%;
+    }
+
+    .banner-image img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .banner-aosolute {
         max-width: 30%;
         position: inherit;
     }
 }
+
 /*  */
+.container-payment {}
+
+.welcome-content {
+    display: flex;
+    width: 30%;
+}
+
+.welcome-content-info {
+    padding-left: 36px;
+}
+
+.welcome-content-info h4 {
+    color: #333333;
+    text-align: left;
+}

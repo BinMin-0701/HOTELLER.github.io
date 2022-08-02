@@ -213,22 +213,25 @@ header {
         padding: 8px 21px;
     }
 
+
     .section-hero h1 {
         display: none;
     }
 }
 @media (max-width:992px) {
+
     .section-hero h1 {
         font-size: 39px;
         line-height: 39px;
+        margin: 0;
     } 
     .ja-main-nav {
         display: none;
     }
 
-    .section-hero {
-        padding-top: 140px;
-        padding-bottom: 40px;
+        .section-hero{
+        padding-top: 117px;
+        padding-bottom: 48px;
     }
 
     .hero-decor {
@@ -249,7 +252,7 @@ header {
     }    
 }
 
-@media screen and (min-width:992.5px) and (max-width:1440px) {
+@media screen and (min-width:992px) and (max-width:1440px) {
     .section-hero {
         padding-top: 160px;
         padding-bottom: 100px;
@@ -333,7 +336,7 @@ header {
 .img-hoteller {
     padding: 0 18px;
 }
-@media (max-width:576px) {
+@media (max-width:992px) {
     .img-hoteller {
             padding: 0 9px;
         }
@@ -755,7 +758,11 @@ header {
         width: 100%;
     }
 }
-
+@media (max-width:992px){
+    .option-exclusive p{
+        padding: 24px 50px;
+    }
+}
 /*  */
 
 /* section latets */
@@ -819,7 +826,11 @@ header {
         font-size: 18px;
         line-height: 24px;
         margin: 4px 0 12px;
+        text-align: center;
     }
+     .section-latets-img img{width: 100%;}   
+    .section-latets-content{text-align: center;}
+    .btn-read-more{justify-content: center;}
 }
 @media (max-width:1200px) {
     .section-latets-info {

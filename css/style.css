@@ -15,15 +15,12 @@ body {
 @media (max-width:576px) {
     body{
         font-size: 12px;
+        font-family: ;
     }
 }
 :root {
-    --h1: 72px;
-    --h2: 48px;
-    --h3: 36px;
-    --h4: 28px;
-    --h5: 18px;
-    --h6: 12px;
+    --f: 'forum',cursive;
+    --m: 'Manrope',cursive;
 }
 
 a {
@@ -177,7 +174,6 @@ header {
 .section-hero h3 {
     font-size: 14px;
     font-weight: 600;
-    font-family: 'Manrope', sans-serif;
     letter-spacing: 0.05em;
     margin: 0 0 16px;
     text-align: center;
@@ -194,55 +190,63 @@ header {
 .section-hero .hero-decor {
     text-align: center;
 }
+@media (max-width:576px) {
+    .ja-header {
+        justify-content: space-between;
+    }
 
-@media (max-width:1200px) {
-    .section-hero h3 {
-        font-size: var(--h6);
+    .ja-brand {
+        padding-left: 38px;
+    }
+
+    .ja-brand a {
+        font-size: 20px;
+    }
+
+    .ja-brand img {
+        max-height: 43px;
+    }
+
+    .btn a {
+        font-size: 10px;
+        line-height: 17px;
+        padding: 8px 21px;
     }
 
     .section-hero h1 {
-        font-size: var(--h2);
+        display: none;
+    }
+}
+@media (max-width:992px) {
+    .section-hero h1 {
+        font-size: 39px;
+        line-height: 39px;
+    } 
+    .ja-main-nav {
+        display: none;
+    }
+
+    .section-hero {
+        padding-top: 140px;
+        padding-bottom: 40px;
+    }
+
+    .hero-decor {
+        display: none;
+    }
+
+
+}
+@media (min-width:992px) and (max-width:1200px) {
+    .section-hero h3 {
+        font-size: 12px;
+    }
+
+    .section-hero h1 {
+        font-size: 48px;
+        line-height: 58px;
         margin: 0 0 30px;
-    }
-
-    @media (max-width:992px) {
-        .ja-main-nav {
-            display: none;
-        }
-
-        .section-hero {
-            padding-top: 140px;
-            padding-bottom: 40px;
-        }
-
-        .hero-decor {
-            display: none;
-        }
-
-        @media (max-width:576px) {
-            .ja-header{
-                justify-content: space-between;
-            }
-            .ja-brand{
-                padding-left: 38px;
-            }
-            .ja-brand a{
-                font-size: 20px;
-            }
-            .ja-brand img{
-                max-height: 43px;
-            }
-            .btn a {
-                font-size: 10px;
-                line-height: 17px;
-                    padding: 8px 21px;
-            }
-
-            .section-hero h1 {
-                display: none;
-            }
-        }
-    }
+    }    
 }
 
 @media screen and (min-width:992.5px) and (max-width:1440px) {
@@ -346,8 +350,6 @@ header {
     background: #AC9D80;
     bottom: 0;
     color: #FFFFFF;
-    max-width: 288px;
-    max-height: 288px;
     position: absolute;
 }
 
@@ -416,11 +418,13 @@ header {
     max-width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 64px;
 }
-
+.frame-box-content{
+    display: flex;
+}
 .frame {
     margin: 0 18px;
+    padding-top: 64px;
 }
 
 .frame p {
@@ -442,18 +446,26 @@ header {
     margin: 0%;
     margin: 8px 54px 0;
 }
-@media (max-width:576px){
-    .frame {
-        }
+
+@media (max-width:992px) {
+    .frame-box {
+        flex-direction: column;
+    }
+    .frame-box-content{
+        justify-content: space-around;
+    }
+    .frame{
+        width: 288px;
+    }
+    .frame h1{
+        font-size: 80px;
+    }
+    @media (max-width:576px){
     .frame h1{
         font-size: 64px;
         margin: 4px 27px 0;
     }
 }
-@media (max-width:992px) {
-    .frame-box {
-        flex-direction: column;
-    }
 }
 
 /* Make Your Golden Memories */
@@ -539,26 +551,29 @@ header {
     text-align: center;
     text-transform: capitalize;
 }
-
+@media (max-width:576px){
+    .option-services{
+        flex-direction: column;
+        margin: auto;
+    }
+    .option-services-group-4{
+        margin: auto;
+    }
+}
+@media (max-width:768px) {
+    .option{
+        margin: 8px 9px;
+        width: 240px;
+    }
+}
 @media (max-width:992px) {
     .option-services {
         display: flex;
-        flex-direction: row;
         justify-content: center;
     }
 
     .option-services-group-4 {
         flex-direction: column;
-    }
-
-    @media (max-width:768px) {
-        .option-services {
-            flex-direction: column;
-        }
-
-        .option-services-group-4 {
-            margin: auto;
-        }
     }
 }
 
@@ -847,7 +862,15 @@ header {
     margin-bottom: 36px;
 }
 
-@media (max-width:576px) {
+@media (max-width:768px){
+    .photo_index {
+        margin: 0 5px;
+    }
+    .photo_index img {
+        margin-bottom: 9px;
+    }
+}
+@media (min-width:768px) and (max-width:1200px) {
     .photo_index {
         margin: 0 9px;
     }
@@ -858,13 +881,15 @@ header {
 }
 
 /* connect */
+footer{
+    padding-top: 84px;
+}
 .connect {
     border-top: 1px dashed #E0E0E0;
     border-bottom: 1px dashed #E0E0E0;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 84px 0 -56px;
 }
 
 .connect .box {
@@ -924,6 +949,7 @@ header {
 @media (max-width:768px) {
     .connect {
         flex-direction: column;
+        margin: 0;
     }
 
     .connect .box {
@@ -996,12 +1022,73 @@ input[type='text'] {
 /*  */
 
 /* About US */
+.btn-header{
+    border: 1px solid #FFFFFF;
+    color: #FFF;
+}
+
+/* banner */
+.hero-banner{
+    background-image: url(../img/banner.png);
+    padding: 195px 0 157px;
+}
+.hero-banner h1{
+    line-height: 58px;
+    margin: 0 0 16px;
+}
+.hero-banner div{
+    display: flex;
+    justify-content: center;
+}
+.hero-banner h1{
+    font-size: 48px;
+}
+.hero-banner h3{
+    font-weight: 400;
+    margin: 0 8px;
+}
+
+/* WELCOME TO Hoteller hotel */
+.section-welcome{
+    display: flex;
+}
+.welcome-title{
+    width: 50%;
+    margin: 0 18px;
+}
+.welcome-title-p1{
+    font-family: 'forum',cursive;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    line-height: 30px;
+    text-transform: capitalize;
+}
 
 /* banner */
 .banner{
-    background-image: url(../img/banner.png);
-    padding-top: 195px;
+    position: relative;
 }
-.banner h1{
-    margin: 0 0 16px;
+.container-banner{
+    padding: 145px 0 64px;
+}
+.banner-aosolute{
+    background-color: #AC9D80;
+    max-width: 396px;
+    max-height: 396px;
+    right: 0;
+    position: absolute;
+    top: -45px;
+}
+.banner-aosolute-content{
+    padding: 48px 48px 64px;
+    text-align: center;
+}
+.banner-aosolute-content p{
+    color: #FFF;
+    font-family: var(--f);
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    margin: 24px 0 40px;
+    text-transform: capitalize;
 }

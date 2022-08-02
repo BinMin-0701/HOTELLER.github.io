@@ -54,6 +54,7 @@ h1 {
 
 .container {
     max-width: 1260px;
+    padding: 0 16px;
     margin: auto;
 }
 
@@ -1042,6 +1043,7 @@ input[type='text'] {
 .hero-banner{
     background-image: url(../img/banner.png);
     padding: 195px 0 157px;
+    margin-top: -92px;
 }
 .hero-banner h1{
     line-height: 58px;
@@ -1058,7 +1060,20 @@ input[type='text'] {
     font-weight: 400;
     margin: 0 8px;
 }
-
+@media (max-width:576px) {
+    header{
+        padding-top: 14px;
+    }
+    .hero-banner {
+        padding-top: 130px;
+        margin-top: -58px;
+    }
+}
+@media (max-width:992px) {
+    .hero-banner h1,.hero-banner div{display: none;}
+    .hero-banner{padding-bottom: 0;}
+}
+/*  */
 /* WELCOME TO Hoteller hotel */
 .section-welcome{
     display: flex;
@@ -1080,12 +1095,12 @@ input[type='text'] {
     position: relative;
 }
 .container-banner{
-    padding: 145px 0 64px;
+    padding-bottom: 64px;
+    padding-top: 145px;
 }
 .banner-aosolute{
     background-color: #AC9D80;
     max-width: 396px;
-    max-height: 396px;
     right: 0;
     position: absolute;
     top: -45px;
@@ -1103,3 +1118,20 @@ input[type='text'] {
     margin: 24px 0 40px;
     text-transform: capitalize;
 }
+@media (max-width:992px){
+    .banner-aosolute{display: none;}
+}
+@media (min-width:992px) and (max-width:1200px) {
+    .banner{
+        display: flex;
+        position: inherit;
+    }
+    .banner-image{max-width: 70%;}
+    .banner-image img{height: 100%;
+    object-fit: cover;}
+    .banner-aosolute{
+        max-width: 30%;
+        position: inherit;
+    }
+}
+/*  */

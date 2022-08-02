@@ -15,7 +15,7 @@ body {
 @media (max-width:576px) {
     body{
         font-size: 12px;
-        font-family: ;
+        font-family: 'Manrope',cursive;
     }
 }
 :root {

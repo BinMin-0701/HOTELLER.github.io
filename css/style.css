@@ -152,7 +152,7 @@ header {
     align-items: center;
     color: #FFFFFF;
     display: flex;
-    font-family: 'forum', cursive;
+    font-family: var(--forum);
     font-size: 30px;
     line-height: 40px;
 }
@@ -302,6 +302,7 @@ header {
         padding-top: 120px;
     }
 }
+
 .section-title {
     text-align: center;
 
@@ -322,15 +323,15 @@ header {
 }
 
 .ct-hoteller p {
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 12px;
+    line-height: 21px;
     margin: 0;
 }
 
-@media (max-width:576px) {
+@media (min-width:576px) {
     .ct-hoteller p {
-        font-size: 12px;
-        line-height: 21px;
+        font-size: 18px;
+        line-height: 32px;
     }
 }
 
@@ -359,19 +360,21 @@ header {
 }
 
 .img-hoteller {
-    padding: 0 18px;
+    padding: 0 9px;
 }
 
-@media (max-width:992px) {
+@media (min-width:992px) {
     .img-hoteller {
-        padding: 0 9px;
+        padding: 0 18px;
     }
 }
+
 @media (min-width:1400px) {
     .section-img-hoteller{
         padding: 0 108px;
     }
 }
+
 .section-img-hoteller .img-hoteller-left {
     padding-top: 83px;
 }
@@ -431,17 +434,17 @@ header {
 
 /* Begin: We strive to be the best in our field to make your */
 .section-future .title-section-future h1 {
-    font-size: 36px;
-    line-height: 46px;
+    font-size: 24px;
+    line-height: 31px;
     letter-spacing: -0.02em;
     max-width: 838px;
     margin: auto;
 }
 
-@media (max-width:576px) {
+@media (min-width:576px) {
     .section-future .title-section-future h1 {
-        font-size: 24px;
-        line-height: 31px;
+        font-size: 36px;
+        line-height: 46px;
     }
 }
 
@@ -459,7 +462,8 @@ header {
 
 .frame {
     margin: 0 18px;
-    padding-top: 64px;
+    padding: 0;
+    width: 40%;
 }
 
 .frame h5 {
@@ -469,22 +473,22 @@ header {
 
 .frame h1 {
     color: #AC9D80;
-    font-size: 96px;
-    line-height: 96px;
+    font-size: 64px;
+    line-height: 64px;
     letter-spacing: -0.02em;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .frame{
-        width: 40%;
-        padding: 0;
+        padding-top: 64px;
+        width: auto;
     }
 }
 
-@media (max-width:992px) {
+@media (min-width:992px) {
     .frame h1 {
-        font-size: 64px;
-        line-height: 64px;
+        font-size: 96px;
+        line-height: 96px;
     }
 }
 
@@ -839,6 +843,7 @@ header {
 .btn-read-more {
     display: flex;
     align-items: center;
+    justify-content: start;
 }
 
 @media (max-width:576px) {
@@ -852,30 +857,22 @@ header {
     .section-latets-img img {
         width: 100%;
     }
+}
 
-    .section-latets-content {
-        text-align: center;
+@media (max-width:992px) {
+    .section-latets {
+        flex-direction: column;
+        margin: 0 10%;
     }
 
-    .btn-read-more {
-        justify-content: center;
+    .section-latets-info {
+        padding: 0;
     }
 }
 
-@media (max-width:1200px) {
+@media (max-width:1400px) {
     .section-latets-info {
         flex-direction: column;
-    }
-
-    @media (max-width:992px) {
-        .section-latets {
-            flex-direction: column;
-            margin: 0 10%;
-        }
-
-        .section-latets-info {
-            padding: 0;
-        }
     }
 }
 /* End: Latest News */
@@ -886,38 +883,41 @@ header {
     justify-content: center;
     padding-top: 64px;
 }
-
+/* mobile */
 .photo_index {
-    margin: 0 18px;
+    margin: 0 5px;
     width: 100%;
 }
 
 .photo_index img {
-    margin-bottom: 36px;
+    margin-bottom: 9px;
     width: 100%;
 }
+
 .photo_index img:hover{
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media (max-width:768px) {
-    .photo_index {
-        margin: 0 5px;
-    }
-
-    .photo_index img {
-        margin-bottom: 9px;
-    }
-}
-
-@media (min-width:768px) and (max-width:1200px) {
+/* tablet */
+@media (min-width:768px){
     .photo_index {
         margin: 0 9px;
     }
-
+    
     .photo_index img {
         margin-bottom: 18px;
     }
+}
+
+/* desktops */
+@media (min-width: 1200px) {
+    .photo_index {
+        margin: 0 18px;
+    }
+    
+    .photo_index img {
+        margin-bottom: 36px;
+    }    
 }
 /* End: Photo Gallery of Our Hotel */
 
@@ -1043,21 +1043,35 @@ input[type='text'] {
 }
 /* End: Footer */
 
-@media (max-width:576px) {
-    br{display: none;}
-}
-
 /* Page About US */
 .btn-header {
     border: 1px solid #FFFFFF;
     color: #FFF;
 }
 
-/* banner */
+/* Begin: section 1 start */
 .hero-banner {
     background-image: url(../img/banner.png);
     padding: 195px 0 157px;
     margin-top: -92px;
+}
+
+@media (min-width: 992px) {
+    .hero-banner {
+        padding: 97px 0 78px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-banner {
+        padding: 130px 0 104px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero-banner{
+        padding: 195px 0 157px;
+    }
 }
 
 .hero-banner h1 {
@@ -1076,7 +1090,12 @@ input[type='text'] {
 
 .hero-banner h3 {
     font-weight: 400;
-    margin: 0 8px;
+    margin: 0;
+}
+
+.hero-banner h3:first-child::after{
+    content: '>';
+    margin: 0 16px;
 }
 
 @media (max-width:576px) {
@@ -1102,8 +1121,9 @@ input[type='text'] {
     }
 }
 
-/*  */
-/* WELCOME TO Hoteller hotel */
+/* End: section 1 start */
+
+/* Begin: WELCOME TO Hoteller hotel */
 .section-welcome {
     display: flex;
 }
@@ -1126,8 +1146,12 @@ input[type='text'] {
     position: relative;
 }
 
+.banner-image img{
+    width: 100%;
+}
+
 .container-banner {
-    padding-bottom: 64px;
+    padding-bottom: 8px;
     padding-top: 145px;
 }
 
@@ -1167,7 +1191,7 @@ input[type='text'] {
     }
 
     .banner-image {
-        max-width: 70%;
+        max-width: 60%;
     }
 
     .banner-image img {
@@ -1176,17 +1200,25 @@ input[type='text'] {
     }
 
     .banner-aosolute {
-        max-width: 30%;
+        max-width: 40%;
         position: inherit;
     }
 }
 
-/*  */
-.container-payment {}
+.container-payment-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 .welcome-content {
     display: flex;
-    width: 30%;
+    padding-top: 56px;
+}
+
+.welcome-content p{
+    margin: 8px 0 4px;
+    max-width: 264px;
 }
 
 .welcome-content-info {
@@ -1197,3 +1229,74 @@ input[type='text'] {
     color: #333333;
     text-align: left;
 }
+/* End: section 1 start */
+
+/* Begin: Inspired by the principles of mindfulness */
+.inspired{
+    padding: 112px 0 120px;
+}
+
+.inspired .title-head h1{
+    max-width: 689px;
+    margin: auto;
+}
+
+.inspired-option{
+    padding-top: 64px;
+}
+
+.inspired-option-box{
+    background: #AC9D80;
+    color: #FFF;
+    position: relative;
+    margin: 18px auto;
+}
+
+@media (min-width: 992px) {
+    .inspired-option-box{
+        width: 50%;
+    }
+
+    .inspired-option{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .inspired-option-box{
+        margin: 0 18px;
+    }
+}
+
+.inspired-img{
+    left: 32%;
+    top: 11%;
+    position: absolute;
+}
+
+.inspired-option-box h4{
+    color: #FFF;
+    padding: 64px 0 16px;
+    position: relative;
+}
+
+.inspired-option-box p{
+    max-width: 412px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.btn-inspired{
+    padding: 48px 0 64px;
+    position: relative;
+}
+
+.btn-inspired a{
+    color: #FFF;
+    border: 1px solid #FFF;
+}
+
+.gift-vouchers{
+    background: #332A21;
+}
+/* End: Inspired by the principles of mindfulness */

@@ -9,7 +9,7 @@
 body {
     background: #FFFFFF;
     color: #4F4F4F;
-    font-family: 'Manrope', sans-serif;
+    font-family: var(--manrope);
     font-weight: 400;
     font-size: 12px;
     line-height: 24px;
@@ -39,7 +39,7 @@ img {
 
 h1 {
     font-size: 48px;
-    font-family: 'forum', cursive;
+    font-family: var(--forum);
     font-weight: 400;
     line-height: 58px;
     letter-spacing: -0.03em;
@@ -50,7 +50,7 @@ h1 {
 
 h4 {
     color: #AC9D80;
-    font-family: 'Forum', cursive;
+    font-family: var(--forum);
     font-size: 28px;
     font-weight: 400;
     line-height: 36px;
@@ -105,11 +105,14 @@ h5 {
     }
 }
 
-.title-head {
-    padding-top: 120px;
-    padding-bottom: 64px;
+.title-head::before {
+    content: '';
+    background: #AC9D80;
+    display: inline-block;
+    height: 1px;
+    transform: rotate(-90deg);
+    width: 40px;
 }
-
 .section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -184,7 +187,7 @@ header {
     background: url(../img/bg_head.jpg) no-repeat;
     background-size: 100%;
     color: #FFFFFF;
-    font-family: 'forum', cursive;
+    font-family: var(--forum);
     padding-top: 308px;
     padding-bottom: 215px;
     margin-top: -100px;
@@ -277,16 +280,13 @@ header {
 }
 
 /* Begin: Title Hoteller Hotel specialises in providing luxury */
-.section-title {
-    text-align: center;
+.section-hoteller{
+    padding-top: 120px;
 }
 
-.line-straight {
-    background: #AC9D80;
-    display: inline-block;
-    height: 1px;
-    transform: rotate(-90deg);
-    width: 40px;
+.section-title {
+    text-align: center;
+
 }
 
 @media (max-width:576px) {
@@ -300,6 +300,7 @@ header {
     max-width: 828px;
     margin: auto;
     text-align: center;
+    padding: 64px 0;
 }
 
 .ct-hoteller p {
@@ -326,9 +327,6 @@ header {
     justify-content: center;
 }
 
-.btn-discover {
-    padding-top: 64px;
-}
 .btn-click a:hover{
     color: #FFF;
     background-color: #AC9D80;
@@ -534,7 +532,7 @@ header {
 
 /* Begin: Luxury & Comfort Our services and wonders of Hoteller */
 .option-services {
-    padding: 0 108px;
+    padding: 64px 108px 0;
 }
 
 .option-services-group-4 {
@@ -587,7 +585,7 @@ header {
         flex-direction: column;
     }
 }
-/* Begin: Luxury & Comfort Our services and wonders of Hoteller */
+/* End: Luxury & Comfort Our services and wonders of Hoteller */
 
 /* Begin What People Say */
 .feedback {
@@ -757,6 +755,10 @@ header {
 /* End: exclusive offer */
 
 /* Begin: Latest News */
+.latest-news .title-head{
+    padding: 8px 0;
+}
+
 .section-latets {
     border-bottom: 1px dashed #E0E0E0;
     display: flex;
@@ -853,6 +855,7 @@ header {
 .photos_gallery {
     display: flex;
     justify-content: center;
+    padding-top: 64px;
 }
 
 .photo {
@@ -894,10 +897,6 @@ header {
 /* End: Photo Gallery of Our Hotel */
 
 /* Begin: Footer */
-footer {
-    padding-top: 84px;
-}
-
 .connect {
     border-top: 1px dashed #E0E0E0;
     border-bottom: 1px dashed #E0E0E0;
@@ -928,12 +927,6 @@ footer {
 
 .contact span {
     color: #AC9D80;
-    font-size: 14px;
-}
-
-.contact p {
-    font-family: 'Manrope', sans-serif;
-    font-size: 14px;
 }
 
 /* address */

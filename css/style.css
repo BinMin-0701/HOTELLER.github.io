@@ -38,14 +38,21 @@ img {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 32px;
     font-family: var(--forum);
     font-weight: 400;
-    line-height: 58px;
+    line-height: 39px;
     letter-spacing: -0.03em;
     margin: 0;
     text-align: center;
     text-transform: capitalize;
+}
+
+@media (min-width:576px) {
+    h1{
+        font-size: 48px;
+        line-height: 58px;
+    }
 }
 
 h4 {
@@ -114,14 +121,14 @@ h5 {
     width: 40px;
 }
 .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
-@media (max-width:576px) {
+@media (min-width:576px) {
     .section {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 }
 
@@ -200,14 +207,36 @@ header {
 }
 
 .section-hero h1 {
-    font-size: 72px;
-    line-height: 78px;
+    font-size: 39px;
+    line-height: 39px;
     letter-spacing: -0.02em;
-    margin: 0 0 120px;
+    margin: 0 0 30px;
+}
+
+@media (min-width:992px){
+    .section-hero h1 {
+        font-size: 48px;
+        line-height: 58px;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-hero h1 {
+        font-size: 72px;
+        line-height: 78px;
+        margin: 0 0 120px;
+    }
 }
 
 .section-hero .hero-decor {
     text-align: center;
+}
+
+@media (max-width:1600px) {
+    .hero-decor {
+        display: none;
+    }
 }
 
 @media (max-width:576px) {
@@ -239,13 +268,6 @@ header {
 }
 
 @media (max-width:992px) {
-
-    .section-hero h1 {
-        font-size: 39px;
-        line-height: 39px;
-        margin: 0;
-    }
-
     .ja-main-nav {
         display: none;
     }
@@ -253,22 +275,6 @@ header {
     .section-hero {
         padding-top: 117px;
         padding-bottom: 48px;
-    }
-
-    .hero-decor {
-        display: none;
-    }
-}
-
-@media (min-width:992px) and (max-width:1200px) {
-    .section-hero h3 {
-        font-size: 12px;
-    }
-
-    .section-hero h1 {
-        font-size: 48px;
-        line-height: 58px;
-        margin: 0 0 30px;
     }
 }
 
@@ -281,18 +287,17 @@ header {
 
 /* Begin: Title Hoteller Hotel specialises in providing luxury */
 .section-hoteller{
-    padding-top: 120px;
+    padding-top: 60px;
 }
 
+@media (min-width:576px) {
+    .section-hoteller{
+        padding-top: 120px;
+    }
+}
 .section-title {
     text-align: center;
 
-}
-
-@media (max-width:576px) {
-    .title-head {
-        padding: 60px 0 32px;
-    }
 }
 
 /* Content - This is hoteller */
@@ -300,7 +305,13 @@ header {
     max-width: 828px;
     margin: auto;
     text-align: center;
-    padding: 64px 0;
+    padding: 32px 0;
+}
+
+@media (min-width: 576px) {
+    .ct-hoteller{
+        padding: 64px 0;
+    }
 }
 
 .ct-hoteller p {
@@ -416,6 +427,8 @@ header {
     font-size: 36px;
     line-height: 46px;
     letter-spacing: -0.02em;
+    max-width: 838px;
+    margin: auto;
 }
 
 @media (max-width:576px) {
@@ -433,6 +446,8 @@ header {
 
 .frame-box-content {
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .frame {
@@ -450,31 +465,19 @@ header {
     font-size: 96px;
     line-height: 96px;
     letter-spacing: -0.02em;
-    margin: 8px 54px 0;
+}
+
+@media (max-width: 768px) {
+    .frame{
+        width: 40%;
+        padding: 0;
+    }
 }
 
 @media (max-width:992px) {
-    .frame-box {
-        flex-direction: column;
-    }
-
-    .frame-box-content {
-        justify-content: space-around;
-    }
-
-    .frame {
-        width: 288px;
-    }
-
     .frame h1 {
-        font-size: 80px;
-    }
-
-    @media (max-width:576px) {
-        .frame h1 {
-            font-size: 64px;
-            margin: 4px 27px 0;
-        }
+        font-size: 64px;
+        line-height: 64px;
     }
 }
 
@@ -532,7 +535,13 @@ header {
 
 /* Begin: Luxury & Comfort Our services and wonders of Hoteller */
 .option-services {
-    padding: 64px 108px 0;
+    padding: 64px 0 0;
+}
+
+@media (min-width: 576px) {
+    .option-services {
+        padding: 64px 108px 0;
+    }
 }
 
 .option-services-group-4 {
@@ -591,6 +600,7 @@ header {
 .feedback {
     display: flex;
     justify-content: center;
+    padding: 64px 0;
 }
 
 .feedback-wrap {
@@ -655,10 +665,6 @@ header {
     line-height: 22px;
     margin: 0;
     text-align: left;
-}
-
-.dot {
-    padding-top: 64px;
 }
 
 .dot button {
@@ -1017,6 +1023,10 @@ input[type='text'] {
     color: #333333;
 }
 /* End: Footer */
+
+@media (max-width:576px) {
+    br{display: none;}
+}
 
 /* Page About US */
 .btn-header {

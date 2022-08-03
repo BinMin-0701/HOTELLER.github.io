@@ -1300,3 +1300,58 @@ input[type='text'] {
     background: #332A21;
 }
 /* End: Inspired by the principles of mindfulness */
+
+/*  */
+.nav-sun-way-rom{
+    padding: 32px 0 64px;
+}
+
+.nav-sun-way-rom ul{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-sun-way-rom li{
+    padding: 0 20px;
+}
+
+.nav-sun-way-rom ul li a {
+    color: #333333;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+
+}
+.sun-way-room-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.show_rooms_information{
+    padding: 18px 24px;
+}
+
+.show_rooms_information h4{
+    text-align: left;
+}
+
+.show_rooms_information h4 a{
+    color: #333;
+}
+
+.show_rooms_information p{
+    margin: 16px 0 14px;
+}
+
+.show_rooms_information p span{
+    color: #828282;
+}
+
+.show_rooms_information p span:first-child::after{
+    content: '|';
+    margin: 0 16px;
+}
+
+/*  */
+

@@ -141,7 +141,6 @@ p{
     height: 1px;
     transform: rotate(-90deg);
     width: 40px;
-    margin-left: -19px;
 }
 .section {
     padding-top: 60px;
@@ -1528,3 +1527,59 @@ input[type='text'] {
         padding-top: 64px;
     }
 }
+
+/* Page Gallery */
+/* Begin: OUR PHOTO GALLERY */
+.our-photo-gallery img{
+    padding: 18px;
+    width: 100%;
+}
+/*  End: OUR PHOTO GALLERY */
+
+/* Page Contact */
+.section-address{
+    padding-top: 120px;
+}
+
+.title-contact-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-contact-content{
+    border: 1px dashed #E0E0E0;
+    max-width: 396px;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.title-contact-content h4{
+    margin: 16px 0 20px;
+}
+
+.contact-us span{
+    color: #AC9D80;
+}
+
+.contact-us p{
+    margin: 8px 0;
+}
+
+.address-head p{
+    max-width: 247px;
+    margin: auto;
+}
+
+.follow-us-head h4{
+    margin-bottom: 0;
+}
+
+.map{
+    padding-top: 64px;
+}
+
+.map img{
+    width: 100%;
+}
+

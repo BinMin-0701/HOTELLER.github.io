@@ -1170,7 +1170,7 @@ input[type='text'] {
 
 .banner-aosolute-content p {
     color: #FFF;
-    font-family: var(--f);
+    font-family: var(--forum);
     font-size: 20px;
     line-height: 30px;
     letter-spacing: -0.01em;

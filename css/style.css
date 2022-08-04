@@ -62,6 +62,17 @@ h1 {
     }
 }
 
+h3{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--forum);
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    margin: 0;
+    text-transform: capitalize;
+    color: #FFF;
+}
+
 h4 {
     color: #AC9D80;
     font-family: var(--forum);
@@ -81,6 +92,10 @@ h5 {
     line-height: 26px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+}
+
+p{
+    margin: 0;
 }
 
 .container {
@@ -126,6 +141,7 @@ h5 {
     height: 1px;
     transform: rotate(-90deg);
     width: 40px;
+    margin-left: -19px;
 }
 .section {
     padding-top: 60px;
@@ -185,6 +201,7 @@ header {
     letter-spacing: 0.04em;
     line-height: 26px;
     padding: 12px 32px;
+    text-transform: uppercase;
 }
 .btn-book-your-stay a:hover{
     background-color: #ac9465;
@@ -1093,7 +1110,7 @@ input[type='text'] {
     margin: 0;
 }
 
-.hero-banner h3:first-child::after{
+.hero-banner h3.child::before{
     content: '>';
     margin: 0 16px;
 }
@@ -1308,7 +1325,15 @@ input[type='text'] {
 
 .nav-sun-way-rom ul{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .nav-sun-way-rom ul{
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
 .nav-sun-way-rom li{
@@ -1321,27 +1346,45 @@ input[type='text'] {
     font-size: 20px;
     line-height: 30px;
     letter-spacing: -0.01em;
+}
 
+.nav-sun-way-rom li a.active {
+    color: #AC9D80;
 }
 .sun-way-room-content{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
+}
+
+@media (min-width: 768px){
+    .sun-way-room-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .show_rooms_information{
     padding: 18px 24px;
 }
 
+.show_rooms_information h5{
+    margin: 32px 0 2px;
+}
+
 .show_rooms_information h4{
     text-align: left;
+    margin: 2px 0 4px;
 }
 
 .show_rooms_information h4 a{
     color: #333;
 }
 
+.show_rooms_information img{
+    width: 100%;
+}
+
 .show_rooms_information p{
-    margin: 16px 0 14px;
+    margin: 12px 0 12px;
 }
 
 .show_rooms_information p span{
@@ -1354,4 +1397,123 @@ input[type='text'] {
 }
 
 /*  */
+.section-price{
+    display: flex;
+    justify-content: center;
+    padding: 49px 0 18px;
+}
 
+.price-room-detail{
+    background: #AC9D80;
+    padding: 42px 48px 0;
+}
+
+.price-room-content{
+    max-width: 300px;
+}
+
+.price-room-content h4{
+    color: #FFF;
+    text-align: left;
+    padding: 6px 0;
+}
+
+.price-room-content h4 span{
+    font-size: 38px;
+}
+
+.price-room-content p{
+    color: #FFF;
+    margin: 0;
+    opacity: 0.6;
+    padding: 6px 0 24px;
+}
+
+.price-room-infor-colum{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 0;
+}
+
+.price-room-infor-colum div{
+    padding-right: 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price-room-infor-colum h3{
+    padding: 0 16px;
+}
+
+.btn-book-our-room{
+    padding: 40px 0 78px;
+}
+
+.btn-book-our-room a{
+    background: #332A21;
+    display: block;
+    text-align: center;
+}
+
+.price-room-img{
+    flex-grow: 1;
+}
+
+.price-room-img img{
+    width: 100%;
+}
+
+.section-amenities-services{
+    display: flex;
+}
+
+.amenities-services{
+    border: 1px dashed #E0E0E0;
+    padding: 48px 48px 56px;
+    margin: 0 18px;
+}
+
+.amenities{
+    width: 60%;
+}
+
+.amenities-services h4{
+    color: #333;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.amenities-item{
+    display: flex;
+    padding: 12px 0;
+}
+
+.amenities-item i{
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.amenities-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.services{
+    width: 40%;
+}
+
+.strive-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.strive-group img{
+    padding: 18px;
+}
+
+.other-rooms {
+    display: flex;
+    padding-top: 64px;
+}

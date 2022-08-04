@@ -896,18 +896,17 @@ header {
 
 /* Begin: Photo Gallery of Our Hotel */
 .photos_gallery {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding-top: 64px;
 }
 /* mobile */
 .photo_index {
-    margin: 0 5px;
     width: 100%;
 }
 
 .photo_index img {
-    margin-bottom: 9px;
+    padding: 12px;
     width: 100%;
 }
 
@@ -917,24 +916,16 @@ header {
 
 /* tablet */
 @media (min-width:768px){
-    .photo_index {
-        margin: 0 9px;
-    }
-    
     .photo_index img {
-        margin-bottom: 18px;
+        padding: 15px;
     }
 }
 
 /* desktops */
 @media (min-width: 1200px) {
-    .photo_index {
-        margin: 0 18px;
-    }
-    
     .photo_index img {
-        margin-bottom: 36px;
-    }    
+        padding: 18px;
+    }
 }
 /* End: Photo Gallery of Our Hotel */
 
@@ -1403,13 +1394,21 @@ input[type='text'] {
     padding: 49px 0 18px;
 }
 
+@media (max-width: 992px) {
+    .section-price{
+        flex-direction: column;
+    }
+}
+
 .price-room-detail{
     background: #AC9D80;
     padding: 42px 48px 0;
 }
 
-.price-room-content{
-    max-width: 300px;
+@media (min-width: 992px) {
+    .price-room-content {
+        max-width: 300px;
+    }
 }
 
 .price-room-content h4{
@@ -1431,12 +1430,14 @@ input[type='text'] {
 
 .price-room-infor-colum{
     display: flex;
-    flex-wrap: wrap;
     padding: 8px 0;
 }
 
-.price-room-infor-colum div{
+.price-room-infor-colum-img {
     padding-right: 16px;
+}
+
+.price-room-infor-colum-h3 {
     display: flex;
     flex-wrap: wrap;
 }
@@ -1460,21 +1461,30 @@ input[type='text'] {
 }
 
 .price-room-img img{
+    height: 100%;
+    object-fit: cover;
     width: 100%;
 }
 
-.section-amenities-services{
-    display: flex;
+
+@media (min-width: 768px) {
+    .section-amenities-services{
+        display: flex;
+    } 
+    
+    .amenities{
+        width: 60%;
+    }
+    
+    .services {
+        width: 40%;
+    }
 }
 
 .amenities-services{
     border: 1px dashed #E0E0E0;
     padding: 48px 48px 56px;
     margin: 0 18px;
-}
-
-.amenities{
-    width: 60%;
 }
 
 .amenities-services h4{
@@ -1494,26 +1504,27 @@ input[type='text'] {
     margin-right: 8px;
 }
 
-.amenities-content{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-
-.services{
-    width: 40%;
+@media (min-width: 1200px) {
+    .amenities-content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }    
 }
 
 .strive-group{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 48px;
 }
 
 .strive-group img{
     padding: 18px;
 }
 
-.other-rooms {
-    display: flex;
-    padding-top: 64px;
+@media (min-width: 768px) {
+    .other-rooms {
+        display: flex;
+        padding-top: 64px;
+    }
 }

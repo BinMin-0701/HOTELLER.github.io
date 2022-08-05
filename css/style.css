@@ -1644,6 +1644,7 @@ textarea{
     height: 200px;
     width: 100%;
     padding: 17px 32px;
+    resize: none;
 }
 
 

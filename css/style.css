@@ -1336,6 +1336,12 @@ input[type='text'] {
         grid-template-columns: repeat(2, 1fr);
         gap: 36px;
     }
+
+    .out-rooms .sun-way-room-row{
+        display: grid;
+        gap: 48px;
+    }
+
     .show_rooms_information{
         padding: 0;
     }
@@ -1553,10 +1559,10 @@ input[type='text'] {
 }
 
 @media (min-width: 768px) {
-    .sun-way-room-row {
+    .our-photo-gallery .sun-way-room-row {
         display: grid;
         grid-template-rows: auto auto auto;
-        gap: 48px;
+        gap: 36px;
     }
 }
 /*  End: OUR PHOTO GALLERY */

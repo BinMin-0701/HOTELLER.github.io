@@ -746,8 +746,9 @@ header {
 }
 
 .option-exclusive p {
-    padding: 24px 101px;
     text-align: center;
+    max-width: 437px;
+    margin: auto;
 }
 
 .btn-view {
@@ -1338,16 +1339,20 @@ input[type='text'] {
     grid-template-columns: repeat(1,1fr);
 }
 
+.show_rooms_information {
+    padding-bottom: 36px;
+}
+
 @media (min-width: 768px){
     .sun-way-room-content {
         grid-template-columns: repeat(2, 1fr);
         gap: 36px;
     }
+    .show_rooms_information{
+        padding: 0;
+    }
 }
 
-.show_rooms_information{
-    padding-bottom:  48px;
-}
 
 .show_rooms_information h5{
     margin: 32px 0 2px;
@@ -1380,13 +1385,17 @@ input[type='text'] {
 }
 
 /* Begin: Page Detail */
+.section-welcome-detail{
+    display: flex;
+}
+
 .section-price{
     display: flex;
     justify-content: center;
     padding: 49px 0 18px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .section-price{
         flex-direction: column;
     }
@@ -1446,6 +1455,7 @@ input[type='text'] {
     background: #332A21;
     display: block;
     text-align: center;
+    padding: 12px 0;
 }
 
 .price-room-img{
@@ -1515,7 +1525,7 @@ input[type='text'] {
     gap: 18px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .strive-group, .strive-img{
         gap: 36px;
     }
@@ -1553,22 +1563,26 @@ input[type='text'] {
     width: 100%;
 }
 
-.sun-way-room-row {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    gap: 36px;
+@media (min-width: 768px) {
+    .sun-way-room-row {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        gap: 48px;
+    }
 }
 /*  End: OUR PHOTO GALLERY */
 
 /* Page Contact */
-.section-address{
-    padding-top: 120px;
-}
+@media (min-width: 768px) {
+    .section-address {
+            padding-top: 120px;
+        }
 
-.title-contact-head{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 36px;
+    .title-contact-head{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 36px;
+    }
 }
 
 .title-contact-content{
@@ -1613,12 +1627,16 @@ input[type='text'] {
 
 .message-row{
     padding: 51px 0 64px;
+    max-width: 1044px;
+    margin: auto;
 }
 
-.input-message {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 36px;
+@media (min-width: 576px) {
+    .input-message {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 36px;
+    }
 }
 
 .input-message input{

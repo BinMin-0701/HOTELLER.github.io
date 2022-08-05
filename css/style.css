@@ -341,7 +341,6 @@ header {
 .ct-hoteller p {
     font-size: 12px;
     line-height: 21px;
-    margin: 0;
 }
 
 @media (min-width:576px) {
@@ -1424,7 +1423,6 @@ input[type='text'] {
 
 .price-room-content p{
     color: #FFF;
-    margin: 0;
     opacity: 0.6;
     padding: 6px 0 24px;
 }

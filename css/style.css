@@ -909,10 +909,6 @@ header {
     width: 100%;
 }
 
-.photo_index img:hover{
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
 /* tablet */
 @media (min-width:768px){
     .photo_index img {
@@ -947,14 +943,19 @@ header {
     border-right: 1px dashed #E0E0E0;
 }
 
+.box h4 {
+    color: #333333;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
 /* contact */
 .contact {
     text-align: center;
 }
 
-.box h4 {
-    color: #333333;
-    margin: 0;
+.box p{
+    padding: 4px 0;
 }
 
 .contact span {
@@ -972,8 +973,12 @@ header {
     text-transform: uppercase;
 }
 
+.social{
+    padding-top: 4px;
+}
+
 .social img {
-    margin: 24px 16px;
+    margin: 0 16px;
 }
 
 @media (max-width:576px) {
@@ -1012,25 +1017,19 @@ header {
 .input-email {
     margin: auto;
     max-width: 612px;
-    padding-top: 48px;
+    padding: 48px 0 24px;
 }
 
 input {
     background-color: #F9F9F9;
     border: none;
-    height: 56px;
+    font-size: 12px;
     width: 100%;
 }
 
 input[type='text'] {
-    padding: 0 24px;
+    padding: 17px 32px;
     color: #828282;
-}
-
-.btn-subscribe {
-    display: flex;
-    justify-content: center;
-    padding: 24px 0 64px;
 }
 
 .joom {
@@ -1133,6 +1132,7 @@ input[type='text'] {
 /* Begin: WELCOME TO Hoteller hotel */
 .section-welcome {
     display: flex;
+    padding-top: 64px;
 }
 
 .welcome-title {
@@ -1256,21 +1256,13 @@ input[type='text'] {
     background: #AC9D80;
     color: #FFF;
     position: relative;
-    margin: 18px auto;
 }
 
 @media (min-width: 992px) {
-    .inspired-option-box{
-        width: 50%;
-    }
-
     .inspired-option{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .inspired-option-box{
-        margin: 0 18px;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 36px;
     }
 }
 
@@ -1349,11 +1341,12 @@ input[type='text'] {
 @media (min-width: 768px){
     .sun-way-room-content {
         grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
     }
 }
 
 .show_rooms_information{
-    padding: 18px 24px;
+    padding-bottom:  48px;
 }
 
 .show_rooms_information h5{
@@ -1386,7 +1379,7 @@ input[type='text'] {
     margin: 0 16px;
 }
 
-/*  */
+/* Begin: Page Detail */
 .section-price{
     display: flex;
     justify-content: center;
@@ -1511,28 +1504,59 @@ input[type='text'] {
 }
 
 .strive-group{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 48px;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 18px;
+    padding-top: 64px;
 }
 
-.strive-group img{
-    padding: 18px;
+.strive-img{
+    display: grid;
+    gap: 18px;
+}
+
+@media (min-width: 768px) {
+    .strive-group, .strive-img{
+        gap: 36px;
+    }
+}
+
+.colums-3{
+    grid-template-columns: auto auto auto;
+}
+
+.colums-2{
+    grid-template-columns: auto auto;
+}
+
+.strive-img img{
+    width: 100%;
 }
 
 @media (min-width: 768px) {
     .other-rooms {
-        display: flex;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 36px;
         padding-top: 64px;
     }
+    
+    .other-rooms .show_rooms_information{
+        padding: 0;
+    }
 }
+/* End: Page Detail */
 
 /* Page Gallery */
 /* Begin: OUR PHOTO GALLERY */
 .our-photo-gallery img{
-    padding: 18px;
     width: 100%;
+}
+
+.sun-way-room-row {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 36px;
 }
 /*  End: OUR PHOTO GALLERY */
 
@@ -1542,20 +1566,24 @@ input[type='text'] {
 }
 
 .title-contact-head{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
 }
 
 .title-contact-content{
     border: 1px dashed #E0E0E0;
-    max-width: 396px;
     padding: 40px 0;
     text-align: center;
     width: 100%;
 }
 
 .title-contact-content h4{
-    margin: 16px 0 20px;
+    padding: 16px 0 20px;
+}
+
+.title-contact-content p{
+    padding: 4px;
 }
 
 .contact-us span{
@@ -1582,4 +1610,28 @@ input[type='text'] {
 .map img{
     width: 100%;
 }
+
+.message-row{
+    padding: 51px 0 64px;
+}
+
+.input-message {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 36px;
+}
+
+.input-message input{
+    margin-bottom: 36px;
+}
+
+textarea{
+    background: #F9F9F9;
+    border: none;
+    font-size: 12px;
+    height: 200px;
+    width: 100%;
+    padding: 17px 32px;
+}
+
 

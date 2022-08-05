@@ -1381,6 +1381,8 @@ input[type='text'] {
 .price-room-detail{
     background: #AC9D80;
     padding: 42px 48px 0;
+    display: flex;
+    align-items: center;
 }
 
 @media (min-width: 992px) {

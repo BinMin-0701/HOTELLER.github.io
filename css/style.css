@@ -1148,71 +1148,50 @@ input[type='text'] {
     text-transform: capitalize;
 }
 
-/* banner */
 .banner {
     position: relative;
+}
+
+.banner-aosolute{
+    display: none;
 }
 
 .banner-image img{
     width: 100%;
 }
 
-.container-banner {
+.section-banner {
     padding-bottom: 8px;
     padding-top: 145px;
 }
 
-.banner-aosolute {
-    background-color: #AC9D80;
-    max-width: 396px;
-    right: 0;
-    position: absolute;
-    top: -45px;
-}
-
-.banner-aosolute-content {
-    padding: 48px 48px 64px;
-    text-align: center;
-}
-
-.banner-aosolute-content p {
-    color: #FFF;
-    font-family: var(--forum);
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: -0.01em;
-    margin: 24px 0 40px;
-    text-transform: capitalize;
-}
-
-@media (max-width:992px) {
+@media (min-width:992px) {
     .banner-aosolute {
-        display: none;
+        display: inherit;
+        background-color: #AC9D80;
+        max-width: 396px;
+        right: 0;
+        position: absolute;
+        top: -45px;
+    }
+
+    .banner-aosolute-content {
+        padding: 48px 48px 64px;
+        text-align: center;
+    }
+
+    .banner-aosolute-content p {
+        color: #FFF;
+        font-family: var(--forum);
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -0.01em;
+        margin: 24px 0 40px;
+        text-transform: capitalize;
     }
 }
 
-@media (min-width:992px) and (max-width:1200px) {
-    .banner {
-        display: flex;
-        position: inherit;
-    }
-
-    .banner-image {
-        max-width: 60%;
-    }
-
-    .banner-image img {
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .banner-aosolute {
-        max-width: 40%;
-        position: inherit;
-    }
-}
-
-.container-payment-content {
+.section-payment-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1236,7 +1215,6 @@ input[type='text'] {
     color: #333333;
     text-align: left;
 }
-/* End: section 1 start */
 
 /* Begin: Inspired by the principles of mindfulness */
 .inspired{
@@ -1308,7 +1286,6 @@ input[type='text'] {
 .nav-sun-way-rom ul{
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -1390,13 +1367,14 @@ input[type='text'] {
 
 .section-price{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 49px 0 18px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .section-price{
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
@@ -1465,7 +1443,6 @@ input[type='text'] {
     object-fit: cover;
     width: 100%;
 }
-
 
 @media (min-width: 768px) {
     .section-amenities-services{
@@ -1587,7 +1564,6 @@ input[type='text'] {
     border: 1px dashed #E0E0E0;
     padding: 40px 0;
     text-align: center;
-    width: 100%;
 }
 
 .title-contact-content h4{

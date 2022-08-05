@@ -1194,7 +1194,19 @@ input[type='text'] {
 .section-payment-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .section-payment-content{
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 1400px) {
+    .section-payment-content{
+        justify-content: space-between;
+    }
 }
 
 .welcome-content {

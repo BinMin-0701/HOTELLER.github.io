@@ -878,7 +878,6 @@ header {
 @media (max-width:992px) {
     .section-latets {
         flex-direction: column;
-        margin: 0 10%;
     }
 
     .section-latets-info {
@@ -904,10 +903,6 @@ header {
 .photo.photo_index {
     display: grid;
     gap: 12px;
-}
-/* mobile */
-.photo_index {
-    width: 100%;
 }
 
 .photo_index img {
@@ -1283,11 +1278,18 @@ input[type='text'] {
 .btn-inspired{
     padding: 48px 0 64px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .btn-inspired a{
     color: #FFF;
     border: 1px solid #FFF;
+}
+
+.gift-vouchers .right a:hover{
+    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
 }
 
 .gift-vouchers{
